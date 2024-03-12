@@ -1,5 +1,5 @@
 import './App.css'
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Home from './pages/home.jsx'
 import Html from './pages/html.jsx'
 import Css from './pages/css.jsx'
