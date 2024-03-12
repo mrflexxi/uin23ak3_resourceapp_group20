@@ -1,38 +1,27 @@
-import resources from './assets/ressurser.js'
 import './App.css'
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/home.jsx'
+import Html from './pages/html.jsx'
+import Css from './pages/css.jsx'
+import Javascript from './pages/javascript.jsx';
+import React from './pages/react.jsx'
+import Headless from './pages/headless.jsx';
 
 function App() {
 
-  console.log(resources)
-
+  // Setter up routes til forskjellige navigasjoner
   return (
-    <>
-      <div id="container">
-        <div id="nav-cont">
-          <nav>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>React</li>
-              <li>Headless-CMS</li>
-            </ul>
-          </nav>
-          <div id="content-cont">
-            <h1>HTML</h1>
-            <p></p>
-            <div id="links-cont">
-              <ul>
-                <li>LINK1</li>
-                <li>LINK2</li>
-                <li>LINK3</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/html" element={<Html />} />
+        <Route path="/css" element={<Css />} />
+        <Route path="/javascript" element={<Javascript />} />
+        <Route path="/react" element={<React />} />
+        <Route path="/headless-cms" element={<Headless />} />
+      </Routes>
+    </HashRouter>
+    )
 }
 
 export default App
