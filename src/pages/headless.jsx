@@ -12,7 +12,7 @@ export default function Headless(){
             {headlessUrls.map((headlessUrl, index) => (
                 <div key={index}>
                     <h1>{headlessUrl.title}</h1>
-                    <h3>{headlessUrl.url}</h3>
+                    <a href={headlessUrl.url}>{headlessUrl.url}</a>
                 </div>
         ))}
         </div>

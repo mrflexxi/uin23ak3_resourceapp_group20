@@ -12,7 +12,7 @@ export default function React(){
             {reactUrls.map((reactUrl, index) => (
                 <div key={index}>
                     <h1>{reactUrl.title}</h1>
-                    <h3>{reactUrl.url}</h3>
+                    <a href={reactUrl.url}>{reactUrl.url}</a>
                 </div>
         ))}
         </div>

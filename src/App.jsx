@@ -10,6 +10,7 @@ import Headless from './pages/headless.jsx';
 function App() {
 
   // Setter up routes til forskjellige navigasjoner
+  // Brukte denne YouTube-videoen som inspirasjon for pages: https://www.youtube.com/watch?v=xMYo9jaMah8
   return (
     <HashRouter>
       <Routes>

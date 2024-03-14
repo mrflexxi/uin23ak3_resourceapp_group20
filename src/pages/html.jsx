@@ -12,7 +12,7 @@ export default function Html(){
             {htmlUrls.map((htmlUrl, index) => (
                 <div key={index}>
                     <h1>{htmlUrl.title}</h1>
-                    <h3>{htmlUrl.url}</h3>
+                    <a href={htmlUrl.url}>{htmlUrl.url}</a>
                 </div>
         ))}
         </div>

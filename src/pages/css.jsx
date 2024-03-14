@@ -12,7 +12,7 @@ export default function Css(){
             {cssUrls.map((cssUrl, index) => (
                 <div key={index}>
                     <h1>{cssUrl.title}</h1>
-                    <h3>{cssUrl.url}</h3>
+                    <a href={cssUrl.url}>{cssUrl.url}</a>
                 </div>
         ))}
         </div>
