@@ -1,4 +1,5 @@
 import resources from '../assets/ressurser.js'
+import  {TheHomeButton } from './home.jsx';
 
 export default function Headless(){
 
@@ -17,6 +18,7 @@ export default function Headless(){
 
     return(
         <section className="resource">
+             {TheHomeButton()}
             <h1 style={{ textDecoration: 'none' }}>{htmlTitle}</h1> {/* Tittel for HTML-kategorien uten understrek */}
             <hr style={{ borderBottom: '2px solid #000' }} /> {/* Tykk linje under tittelen */}
 
@@ -27,6 +29,7 @@ export default function Headless(){
                     {index !== headlessUrls.length - 1 && <hr />} {/* Legg til linje etter hver ressurs, unntatt den siste */}
                 </article>
         ))}
+            
             <button onClick={handleGoBack} style={{ float: 'right' }}>Tilbake</button> 
         </section>
     )
