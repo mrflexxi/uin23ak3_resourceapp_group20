@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import resources from '../assets/ressurser.js'
+import '../styles/main.scss'; // Importerer shared.scss
 
 export default function Home(){
 
@@ -8,7 +9,8 @@ export default function Home(){
     const categories = Array.from(new Set(resources?.map(resource => resource.category)))
     const renderCategories = ()=>{
         return categories.map((category, index) => (
-            <NavLink key={category} to={`/${category}`}>{category}</NavLink>
+            <NavLink key={category} to={`/${category}`} className="Home">{category}</NavLink> // Legger til klassenavn for å aktivere stilene for Home-komponenten
+            
         ))
     }
 
@@ -24,5 +26,5 @@ export default function Home(){
                 </div>
             </div>
         </>
-        )
+    )
 }
