@@ -1,4 +1,5 @@
 import resources from '../assets/ressurser.js';
+import  {TheHomeButton } from './home.jsx';
 
 export default function Css() {
 
@@ -17,8 +18,10 @@ export default function Css() {
 
     return (
         <div className="resource">
+             {TheHomeButton()}
             <h1 style={{ textDecoration: 'none' }}>{htmlTitle}</h1> {/* Tittel for HTML-kategorien uten understrek */}
             <hr style={{ borderBottom: '2px solid #000' }} /> {/* Tykk linje under tittelen */}
+            
             
             {cssUrls.map((cssUrl, index) => (
                 <div key={index}>

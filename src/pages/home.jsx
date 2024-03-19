@@ -28,3 +28,11 @@ export default function Home(){
         </>
     )
 }
+
+const TheHomeButton = () => {
+    return (
+        <NavLink key="home" id="HomeButton" to="/">Home</NavLink>
+    );
+}
+
+export {TheHomeButton}
