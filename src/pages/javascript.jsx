@@ -30,7 +30,7 @@ export default function Javascript(){
                     {index !== jsUrls.length - 1 && <hr />} {/* Legg til linje etter hver ressurs, unntatt den siste */}
                 </div>
         ))}
-            {TheHomeButton()}
+           
         <button onClick={handleGoBack} style={{ float: 'right' }}>Tilbake</button> 
         </div>
     )
