@@ -16,15 +16,13 @@ export default function Home(){
 
     return(
         <>
-            <div id="container">
-                <div id="nav-cont">
+            <main id="container">
+                <section id="nav-cont">
                 <nav>
                     {renderCategories()}
                 </nav>
-                <div id="content-cont">
-                </div>
-                </div>
-            </div>
+                </section>
+            </main>
         </>
     )
 }

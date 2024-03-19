@@ -17,21 +17,21 @@ export default function Css() {
         .map(resource => ({ title: resource.title, url: resource.url }));
 
     return (
-        <div className="resource">
+        <section className="resource">
              {TheHomeButton()}
             <h1 style={{ textDecoration: 'none' }}>{htmlTitle}</h1> {/* Tittel for HTML-kategorien uten understrek */}
             <hr style={{ borderBottom: '2px solid #000' }} /> {/* Tykk linje under tittelen */}
             
             
             {cssUrls.map((cssUrl, index) => (
-                <div key={index}>
+                <article key={index}>
                     <h2>{cssUrl.title}</h2> {/* Tittel for hver ressurs */}
                     <a href={cssUrl.url}>{cssUrl.url}</a>
                     {index !== cssUrls.length - 1 && <hr />} {/* Legg til linje etter hver ressurs, unntatt den siste */}
-                </div>
+                </article>
             ))}
             <button onClick={handleGoBack} style={{ float: 'right' }}>Tilbake</button> 
-        </div>
+        </section>
         
     )
     
