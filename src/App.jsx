@@ -1,5 +1,6 @@
 import resources from './assets/ressurser.js'
 import './App.css'
+import './styles/main.scss'
 
 function App() {
 

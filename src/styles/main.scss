@@ -1,0 +1,113 @@
+// Definisjon av variabler
+$main-color: rgb(70, 70, 78);
+$link-color: white;
+$hover-color: #00b32d;
+
+.resource {
+  //display: grid;
+  //grid-template-columns: 1fr 1fr; /* To kolonner */
+  //grid-auto-rows: auto; /* Automatisk høyde basert på innhold */
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: #8b8989;
+ 
+  background-color: $main-color;
+  padding-top: 10px;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    margin-top: 0.1px;
+    color: rgb(255, 217, 0);
+    text-decoration: underline;
+  }
+
+  a {
+    color: $link-color;
+    text-decoration: none;
+    margin: 2rem;
+    background-color: #474646; 
+    justify-content: center;
+    border-radius: 1rem;
+    width: 22rem;
+
+    &:hover {
+      text-decoration: underline;
+      color: $hover-color;
+      transition: all 0.5s;
+      
+    }
+  }
+  button {
+    //color: #00b32d;
+    background-color: #ec9614;
+    font-size: small;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: all 0.5s;
+      font-weight: bold;
+      
+    }
+
+  }
+}
+
+// Felles stiler for navigasjon
+body {
+  background-color: rgb(143, 143, 148);
+}
+
+#container {
+  #nav-cont {
+    nav {
+      background-color: $main-color;
+      color: #ffffff;
+      display: flex;
+      border-radius: 22rem;
+      filter: drop-shadow(16px 20px 10px #2c2c2c);
+      padding: 2rem;
+
+      a.Home {
+        display: flex;
+        color: #ec9614;
+        list-style: none;
+        padding: 2rem;
+        margin: 1rem;
+        justify-content: space-between;
+        font-size: 2rem;
+
+        &:hover {
+          background-color: #969696;
+          color: rgb(32, 42, 173);
+          filter: drop-shadow(16px 7px 8px #2c2c2c);
+          border-radius: 15px;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+}
+// Media queries for responsivitet
+@media only screen and (max-width: 768px) {
+  .resource {
+    width: 90%; // Tilpasser bredden til skjermstørrelsen
+    margin: 0 auto; // Sentrerer elementet
+    padding: 5px; // Reduserer padding for mindre enheter
+  }
+
+  h1 {
+    font-size: 1.5rem; // Reduserer fontstørrelse for mindre enheter
+  }
+
+  #container {
+    #nav-cont {
+      nav {
+        padding: 1rem; // Reduserer padding for mindre enheter
+      }
+    }
+  }
+}
